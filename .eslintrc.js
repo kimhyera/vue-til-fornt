@@ -14,7 +14,21 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+  '@typescript-eslint/no-explicit-any': 'off',
+  '@typescript-eslint/no-empty-function': 'off',
+  "@typescript-eslint/explicit-module-boundary-types": 'off',
+
+
+  "prettier/prettier": ['error', {
+      // 아래 규칙들은 개인 선호에 따라 prettier 문법 적용
+      // https://prettier.io/docs/en/options.html
+
+    singleQuote: true,
+    semi: true,
+    useTabs: true,
+    endOfLine: "auto",
+    tabWidth: 4,
+    printWidth: 80,
+  }]
   },
 };
