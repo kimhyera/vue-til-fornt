@@ -1,0 +1,19 @@
+//base
+@import "./base/mixins";
+@import "./base/variables";
+@import "./base/function";
+
+//reset
+@import "./base/reset";
+
+//fonts
+@import "./fonts/fonts";
+
+//common
+@import "./common/common";
+
+//components
+//각각의 components에 import하였음.
+
+//views
+@import "./views/main";

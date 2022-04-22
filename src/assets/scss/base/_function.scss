@@ -1,0 +1,13 @@
+//unit 
+@function em($val, $font-size-base: 16) {
+	@return ($val/$font-size-base) / 2 * 1em;
+}
+
+@function rem($val, $font-size-base: 16) {
+	@return ($val/$font-size-base) / 2 * 1rem;
+}
+
+//letterSpacing
+@function letterSpacing($val) {
+	@return ($val/1000)*1em;
+}

@@ -1,0 +1,150 @@
+//Global
+
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-base + px;
+	font-weight: $font-weight-base;
+	letter-spacing: $letter-spacing-base;
+	line-height: $line-height-base;
+	color: $font-color-base;
+	background-color: #fff;
+	word-break: break-all;
+}
+
+//font-size
+//앱개발 기준 360 사이즈보다 큰경우  +0.5 로 작업
+@media all and (max-width: 361px) {
+	html,
+	body {
+		font-size: 15px;
+	}
+}
+
+@media all and (max-width: 281px) {
+	html,
+	body {
+		font-size: 14px;
+	}
+	span.input_wrap > input::placeholder {
+		font-size: 0.867rem;
+	}
+}
+
+//layout
+
+#wrap {
+	z-index: 1;
+	position: relative;
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
+	overflow: hidden;
+	background: #fff;
+
+	&.addNav {
+		padding: 0 0 4.467rem 0;
+	}
+}
+
+.section_box {
+	width: 100%;
+	div {
+		z-index: 1;
+		position: relative;
+		//padding: 0 1.333rem;
+	}
+}
+
+.section_title {
+	height: 1.433rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: -0.036rem;
+	color: #222222;
+}
+
+.page-title {
+	font-size: rem(36);
+	font-weight: bold;
+	// line-height: 1.5;
+	letter-spacing: letterSpacing(-1.08);
+	color: #222;
+}
+.store-section-title {
+	font-size: rem(26);
+	font-weight: bold;
+	// line-height: 1.85;
+	letter-spacing: letterSpacing(-0.78);
+	color: #666;
+}
+.store-section-text {
+	font-size: rem(30);
+	line-height: 1.6;
+	letter-spacing: letterSpacing(-3);
+	color: #666;
+}
+#main {
+	z-index: 2;
+	position: relative;
+	width: 100%;
+}
+
+//form
+@import 'buttons';
+/* input 스타일 */
+span.input_wrap {
+	z-index: 1;
+	position: relative;
+	display: block;
+	width: 100%;
+	border: 0.067rem solid #ddd;
+	border-radius: 0.333rem;
+	overflow: hidden;
+  }
+  span.input_wrap.on {
+	border: 0.067rem solid #888;
+  }
+  span.input_wrap > input {
+	padding: 0.9rem 0;
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	letter-spacing: -0.03rem;
+	color: #666666;
+	text-indent: 1rem;
+	outline: 0;
+  }
+  
+  span.input_wrap > input::placeholder {
+	font-size: 0.933rem;
+	font-weight: normal;
+	letter-spacing: -0.028rem;
+	color: #888888;
+  }
+  span.input_wrap > i {
+	z-index: 3;
+	display: none;
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	transform: translateY(-50%);
+	width: 1.133rem;
+	height: 1.133rem;
+  }
+  span.input_wrap > i > button {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+  }
+  span.input_wrap > i > button > img {
+	width: 100%;
+  }
+  
+  span.input_wrap > input[type="password"] {
+	color: #aaa;
+	font-size: 16px;
+	font-family: sans-serif;
+	letter-spacing: 5px;
+  }
+  

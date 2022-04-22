@@ -1,17 +1,17 @@
 <template lang="">
-	<div>asdfadsdf</div>
+	<router-view />
 </template>
 <script>
 export default {
 	created() {
-		console.log('dadf')
-		const ss = 0
+		console.log('dadf');
+		const ss = 0;
 	},
 	methods: {
 		test(ddd) {
-			console.log('asf')
+			console.log('asf');
 		},
 	},
-}
+};
 </script>
 <style lang=""></style>

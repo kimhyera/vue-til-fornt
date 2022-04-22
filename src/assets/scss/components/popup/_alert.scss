@@ -1,0 +1,174 @@
+.center-pop {
+	z-index: 6;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+
+	> div {
+		z-index: 7;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 88.888%;
+		max-width: 640px;
+		background: #fff;
+		border-radius: 0.6rem;
+
+		> div {
+			z-index: 1;
+			position: relative;
+			padding: 1.333rem 1.333rem 1.667rem 1.333rem;
+
+			> h2 {
+				font-size: rem(32);
+			}
+		}
+	}
+
+	.pop_btn {
+		button {
+			padding: 0.8rem 0;
+			background: #222;
+		}
+	}
+
+	.pop_two_btn {
+		ul {
+			li {
+				button.no_btn {
+					padding: 0.8rem 0;
+				}
+				
+				button.yes_btn {
+					padding: 0.8rem 0;
+					background: #222;
+				}
+			}
+		}
+  	}
+	.center_pop_close {
+		z-index: 2;
+		display: block;
+		position: absolute;
+		top: 1.5rem;
+		right: 1.333rem;
+		width: 1.4rem;
+		height: 1.4rem;
+
+		button {
+			background: transparent;
+			width: 100%;
+
+			img {
+				width: 100%;
+			}
+	  	}
+	}
+}
+
+/* 기본팝업 스타일 */
+.full_btn_pop h2 {
+	/* padding:0.667rem 0 0 0; */
+	line-height: 1.5;
+	padding: 0.333rem 0 0 0;
+	font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: -0.036rem;
+	text-align: center;
+	color: #222222;
+  }
+  .full_btn_pop h2 > strong {
+	display: inline-block;
+	/* padding: 0 0 0.5rem 0; */
+	font-size: 1.2rem;
+	font-weight: 600;
+	/* line-height: 1.5; */
+	letter-spacing: -0.036rem;
+	color: #fb5751;
+  }
+  
+  .full_btn_pop p {
+	/* padding: 1rem 0 0 0; */
+	padding: 0.667rem 0 0 0;
+	font-size: 1rem;
+	letter-spacing: -0.03rem;
+	text-align: center;
+	color: #666666;
+	line-height: 1.5;
+  }
+  .full_btn_pop p > strong {
+	font-size: 1rem;
+	letter-spacing: -0.03rem;
+	text-align: center;
+	color: #fb5751;
+	line-height: 1.5;
+  }
+
+
+  .pop_btn {
+	padding: 1.667rem 0 0 0;
+	display: block;
+	width: 100%;
+	border-radius: 0.333rem;
+	overflow: hidden;
+  }
+  .pop_btn > button {
+	padding: 1.167rem 0;
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	letter-spacing: -0.03rem;
+	text-align: center;
+	color: #ffffff;
+	background: #2a2a41;
+	border-radius: 0.333rem;
+	overflow: hidden;
+  }
+  .pop_two_btn {
+	padding: 1.667rem 0 0 0;
+	width: 100%;
+  }
+  .pop_two_btn > ul {
+	width: 100%;
+  }
+  .pop_two_btn > ul > li {
+	float: left;
+	width: 48%;
+  }
+  .pop_two_btn > ul > li:nth-child(2) {
+	float: right;
+	text-align: right;
+  }
+  .pop_two_btn > ul > li > button.no_btn {
+	padding: 1rem 0;
+	/* width:310px; */
+	width: 100%;
+	max-width: 10.333rem;
+	font-size: 1rem;
+	letter-spacing: -0.03rem;
+	text-align: center;
+	color: #444444;
+	border: 0.067rem solid #888;
+	border-radius: 0.333rem;
+	background: #fff;
+  }
+  .pop_two_btn > ul > li > button.yes_btn {
+	padding: 1rem 0;
+	width: 100%;
+	max-width: 10.333rem;
+	font-size: 1rem;
+	letter-spacing: -0.03rem;
+	text-align: center;
+	color: #fff;
+	border-radius: 0.333rem;
+	border: 0.067rem solid #2a2a41;
+	background: #2a2a41;
+  }
+  .pop_two_btn > ul > li > button.yes_btn.off {
+	border: 0.067rem solid #aaa;
+	background: #aaa;
+  }

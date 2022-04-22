@@ -1,0 +1,98 @@
+@charset "utf-8";
+// base
+@import "~@/assets/scss/base/_mixins.scss";
+@import "~@/assets/scss/base/_variables.scss";
+@import "~@/assets/scss/base/_function.scss";
+
+#nav {
+	z-index: 5;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	width: 100%;
+	max-width: 720px;
+	transform: translateX(-50%);
+	background: #fff;
+	border-top: 0.067rem solid #e2e2e2;
+
+	> ul {
+		padding: rem(13) 0;
+		display: flex;
+
+		> li {
+			max-width: 20%;
+			flex: 0 0 20%;
+			text-align: center;
+
+			> a {
+				padding: 1.867rem 0 0 0;
+				display: block;
+				font-size: 0.8rem;
+				line-height: 1.21;
+				letter-spacing: -0.024rem;
+				text-align: center;
+				color: #888888;
+			}
+
+			&.order > a {
+				background: url(~@/assets/img/icon/btn_cart-default.png) no-repeat 50% 0;
+				background-size: 1.4rem 1.4rem;
+			}
+
+			&.discount > a {
+				background: url(~@/assets/img/icon/btn_coupon-default.png) no-repeat 50% 0;
+				background-size: 1.4rem 1.4rem;
+			}
+
+			&.home > a {
+				background: url(~@/assets/img/icon/btn_home-default.png) no-repeat 50% 0;
+				background-size: 1.4rem 1.4rem;
+			}
+
+			&.order_list > a {
+				background: url(~@/assets/img/icon/btn_history-default.png) no-repeat 50% 0;
+				background-size: 1.4rem 1.4rem;
+			}
+
+			&.mypage > a {
+				background: url(~@/assets/img/icon/btn_mypage-default.png) no-repeat 50% 0;
+				background-size: 1.4rem 1.4rem;
+			}
+
+			&.order > a.on,
+			&.order .router-link-exact-active {
+				color: #fb5751;
+				background: url(~@/assets/img/icon/btn_cart-over.png) no-repeat 50% 0;
+				background-size: 1.4rem 1.4rem;
+			}
+
+			&.discount > a.on,
+			&.discount .router-link-exact-active {
+				color: #fb5751;
+				background: url(~@/assets/img/icon/btn_coupon-over.png) no-repeat 50% 0;
+				background-size: 1.4rem 1.4rem;
+			}
+
+			&.home > a.on,
+			&.home .router-link-exact-active {
+				color: #fb5751;
+				background: url(~@/assets/img/icon/btn_home-over.png) no-repeat 50% 0;
+				background-size: 1.4rem 1.4rem;
+			}
+
+			&.order_list > a.on,
+			&.order_list .router-link-exact-active {
+				color: #fb5751;
+				background: url(~@/assets/img/icon/btn_history-over.png) no-repeat 50% 0;
+				background-size: 1.4rem 1.4rem;
+			}
+
+			&.mypage > a.on,
+			&.mypage .router-link-exact-active {
+				color: #fb5751;
+				background: url(~@/assets/img/icon/btn_mypage-over.png) no-repeat 50% 0;
+				background-size: 1.4rem 1.4rem;
+			}
+		}
+	}
+}

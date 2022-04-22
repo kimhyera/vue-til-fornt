@@ -1,0 +1,662 @@
+@charset "utf-8";
+
+/* 로그인 */
+.login_box {
+  padding: 2rem 1.333rem 0 1.333rem;
+}
+.login_input {
+  width: 100%;
+}
+.login_input > li {
+  margin: 0 0 0.667rem 0;
+}
+.login_input > li:last-child {
+  margin: 0;
+}
+.login_input > li > p {
+  display: none;
+  padding: 0.6rem 0 0 0;
+  font-size: 0.867rem;
+  font-weight: 300;
+  letter-spacing: -0.026rem;
+  color: #e74038;
+}
+.login_option {
+  padding: 1rem 0 0 0;
+  width: 100%;
+}
+.login_option > li {
+  float: left;
+  padding: 0 1rem 0 0;
+}
+.login_option > li:last-child {
+  float: right;
+  padding: 0;
+}
+.login_option > li > a {
+  position: relative;
+  padding: 0.333rem 0 0.133rem 0;
+  display: inline-block;
+  font-size: 0.867rem;
+  letter-spacing: -0.026rem;
+  color: #aaaaaa;
+}
+.login_option > li > a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.067rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #aaa;
+}
+.login_box > p {
+  padding: 1.667rem 0 0 0;
+  width: 100%;
+}
+.login_box > p > button {
+  padding: 1.133rem 0;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 0.333rem;
+  background: #fb5751;
+}
+.login_box > div {
+  padding: 1.667rem 0 0 0;
+  width: 100%;
+}
+.login_box > div > p {
+  font-size: 0.867rem;
+  letter-spacing: -0.026rem;
+  text-align: center;
+  color: #888888;
+}
+.login_box > div > p > a {
+  margin: 0 0 0 0.167rem;
+  padding: 0 0 0.133rem 0;
+  position: relative;
+  display: inline-block;
+  font-size: 0.867rem;
+  letter-spacing: -0.026rem;
+  font-weight: 500;
+  color: #fb5751;
+}
+.login_box > div > p > a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.067rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fb5751;
+}
+/* 카카오 로그인 */
+.kakao_login {
+  z-index: 3;
+  position: relative;
+  /* margin:4.667rem 0 0 0; */
+  margin: 3rem 0 0 0;
+  display: block;
+  text-align: center;
+}
+.kakao_login.addFixed {
+  z-index: 3;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 0 0.667rem 0;
+}
+.kakao_login > a {
+  display: inline-block;
+  padding: 0 0 6rem 0;
+  font-size: 0.867rem;
+  font-weight: 500;
+  letter-spacing: -0.026rem;
+  color: #666666;
+  background: url(~@/assets/img/mypage/icon_kakao.png) no-repeat 50% 100%;
+  background-size: 5.667rem 5.667rem;
+}
+
+/* 아이디 비번찾기 */
+.login_menu_tab {
+  padding: 0 1.333rem;
+  border-bottom: 0.067rem solid #eee;
+}
+.login_menu_tab > li {
+  position: relative;
+  float: left;
+  width: 50%;
+}
+.login_menu_tab > li > button {
+  padding: 1.567rem 0 0.8rem 0;
+  display: block;
+  width: 100%;
+  font-size: 1.067rem;
+  letter-spacing: -0.032rem;
+  text-align: center;
+  color: #888888;
+  background: transparent;
+  font-family: "Spoqa Han Sans Neo";
+}
+.login_menu_tab > li.on > button {
+  font-weight: 600;
+  color: #fb5751;
+}
+.login_menu_tab > li.on::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.067rem;
+  left: 0;
+  width: 100%;
+  height: 0.133rem;
+  background: #fb5751;
+}
+.find_user_info {
+  width: 100%;
+}
+.find_box {
+  padding: 2rem 1.333rem;
+}
+.find_box > h2 {
+  padding: 0 0 1.2rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.036rem;
+  color: #222222;
+}
+span.input_wrap > input::placeholder {
+  font-size: 0.933rem;
+  letter-spacing: -0.028rem;
+  color: #888888;
+}
+.find_box > ul {
+  width: 100%;
+}
+.find_box > ul > li {
+  width: 100%;
+  padding: 0 0 1.333rem 0;
+}
+.find_box > ul > li:last-child {
+  padding: 0;
+}
+.tel_box > span {
+  width: 100%;
+  display: block;
+}
+.tel_box > p {
+  padding: 0.667rem 0 0 0;
+  width: 100%;
+}
+.tel_box > p > button {
+  padding: 1rem 0;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #444444;
+  border-radius: 0.333rem;
+  border: 0.067rem solid #888888;
+  background-color: #ffffff;
+}
+.tel_input_sns > span.input_wrap {
+  z-index: 1;
+  position: relative;
+  float: left;
+  display: block;
+  width: 70%;
+}
+.tel_input_sns > span.input_wrap > i {
+  /* right:130px; */
+  right: 4.333rem;
+}
+.tel_input_sns > span em {
+  z-index: 2;
+  position: absolute;
+  right: 1rem;
+  top: 1.167rem;
+  display: inline-block;
+  font-size: 0.933rem;
+  letter-spacing: -0.028rem;
+  text-align: right;
+  color: #fb5751;
+}
+.tel_input_sns > p {
+  float: right;
+  display: block;
+  width: 26%;
+}
+.tel_input_sns > p > button {
+  width: 100%;
+  padding: 0.967rem 0;
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #ffffff;
+  background: #aaa;
+  border-radius: 0.333rem;
+}
+.tel_input_sns.on > p > button {
+  background: #fb5751;
+}
+
+.find_box > p {
+  padding: 1.667rem 0 0 0;
+}
+.find_box > p > button {
+  padding: 1.133rem 0;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 0.333rem;
+  background: #fb5751;
+}
+.input_id {
+  margin: 0 0 2.333rem 0;
+}
+/* 아이디 비밀번호 찾기 완료 */
+.find_ok_box {
+  padding: 2rem 1.333rem;
+}
+.find_ok_box > h2 {
+  padding: 0 0 1.4rem 0;
+  font-size: 1.467rem;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: -0.044rem;
+  color: #222222;
+}
+.find_ok_box > p {
+  font-size: 1.067rem;
+  letter-spacing: -0.032rem;
+  color: #666666;
+  white-space: nowrap;
+}
+.find_ok_box > p > strong {
+  font-size: 1.067rem;
+  font-weight: 600;
+  color: #2a2a41;
+}
+.find_ok_box .pop_two_btn > ul > li {
+  width: 50%;
+}
+.find_ok_box .pop_two_btn > ul > li > a {
+  display: inline-block;
+  padding: 1.167rem 0;
+  width: 95%;
+  max-width: 10.333rem;
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #fff;
+  border: 0.067rem solid #fb5751;
+  border-radius: 0.333rem;
+  background: #fb5751;
+}
+.find_ok_box .pop_two_btn > ul > li > a.go_home {
+  color: #444;
+  border: 0.067rem solid #888;
+  border-radius: 0.333rem;
+  background: #fff;
+}
+.find_pass_ok > ul {
+  padding: 1.333rem 0 0 0;
+  width: 100%;
+}
+.find_pass_ok > ul > li {
+  padding: 0 0 0.667rem 0;
+}
+.find_pass_ok > ul > li:last-child {
+  padding: 0;
+}
+.find_pass_ok > span {
+  padding: 1.667rem 0 0 0;
+  display: block;
+  width: 100%;
+}
+.find_pass_ok > span > button {
+  padding: 1.133rem 0;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 0.333rem;
+  background: #fb5751;
+}
+
+/* 회원가입 */
+.join_agreement {
+  z-index: 1;
+  position: relative;
+  padding: 2rem 1.333rem;
+}
+.join_agreement > h2 {
+  padding: 0 0 1.133rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.036rem;
+  color: #222222;
+}
+.join_agreement > div {
+  padding: 1rem;
+  border-radius: 0.333rem;
+  border: 0.067rem solid #aaa;
+  box-shadow: 0.267rem 0.267rem 0.667rem 0 rgba(0, 0, 0, 0.16);
+  background: #fff;
+}
+.join_agreement > div > span {
+  display: block;
+  /* height: 1.533rem; */
+  height: 1.233rem;
+}
+.join_agreement > div .agreement_design input[type="checkbox"] + label {
+  padding: 0.067rem 0 0 2rem !important;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.03rem;
+  color: #444444;
+}
+.join_agreement .agreement_design input[type="checkbox"] + label:before {
+  background: url(~@/assets/img/icon/btn_check_default.png) no-repeat 50% 50%;
+  background-size: 0.8rem 0.567rem;
+}
+.join_agreement
+  .agreement_design
+  input[type="checkbox"]:checked
+  + label:before {
+  background: none;
+}
+.join_agreement .agreement_design input[type="checkbox"] + label:before {
+  /* border:none; */
+  border-radius: 100%;
+  border: 0.067rem solid #ccc;
+  box-sizing: border-box;
+}
+.join_agreement .agreement_design input[type="checkbox"]:checked + label:after {
+  border: none;
+  background: #fff url(~@/assets/img/icon/btn_check_over.png) no-repeat 50% 50%;
+  background-size: 0.8rem 0.567rem;
+}
+
+.join_agreement > div.on {
+  background: #fb5751;
+  border: 0.067rem solid #fb5751;
+}
+.join_agreement
+  > div.on
+  .agreement_design
+  input[type="checkbox"]:checked
+  + label {
+  color: #fff;
+}
+
+.join_agreement > ul {
+  padding: 1.733rem 1rem 0 1rem;
+}
+.join_agreement > ul > li {
+  /* padding:0 0 1.200rem 0; */
+  padding: 0 0 0.667rem 0;
+}
+.join_agreement > ul > li:last-child {
+  padding: 0;
+}
+.join_agreement > ul > li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.join_agreement > ul > li > span {
+  z-index: 1;
+  position: relative;
+  float: left;
+  display: inline-block;
+}
+.join_agreement > ul > li > p {
+  padding: 0.167rem 0 0 0;
+  z-index: 2;
+  position: relative;
+  float: right;
+  display: inline-block;
+}
+.join_agreement > ul > li > p > a {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.join_agreement > ul > li > p > a > img {
+  width: 100%;
+}
+.join_agreement > ul > li .agreement_design input[type="checkbox"] + label {
+  padding: 0.067rem 0 0 2rem;
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: -0.03rem;
+  color: #666666;
+}
+.join_agreement
+  > ul
+  > li
+  .agreement_design
+  input[type="checkbox"]
+  + label
+  > strong {
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  color: #888888;
+}
+.join_agreement
+  > ul
+  > li
+  .agreement_design
+  input[type="checkbox"]
+  + label:before {
+  border: none;
+  background: url(~@/assets/img/mypage/icon_check-default.png) no-repeat 50% 50%;
+  background-size: 1rem 1rem;
+}
+.join_agreement
+  > ul
+  > li
+  .agreement_design
+  input[type="checkbox"]:checked
+  + label:before {
+  background: none;
+}
+.join_agreement
+  > ul
+  > li
+  .agreement_design
+  input[type="checkbox"]:checked
+  + label:after {
+  border: none;
+  background: url(~@/assets/img/mypage/icon_check-over.png) no-repeat 50% 50%;
+  background-size: 1rem 1rem;
+}
+
+/* 회원가입 폼 */
+.input_user_info {
+  width: 100%;
+}
+.user_info_box {
+  padding: 2rem 1.333rem;
+}
+.user_info_box > h2 {
+  padding: 0 0 1.133rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.036rem;
+  color: #222222;
+}
+.user_info_box:nth-child(1) {
+  border-bottom: 0.067rem solid #ececec;
+}
+.user_info_box:nth-child(2) {
+  padding: 2rem 1.333rem 2.5rem 1.333rem;
+  border-top: 0.467rem solid #f5f6f7;
+}
+.user_info_box > ul {
+  width: 100%;
+}
+.user_info_box > ul > li {
+  width: 100%;
+  padding: 0 0 0.667rem 0;
+}
+.user_info_box > ul > li:last-child {
+  padding: 0;
+}
+.user_info_box > ul > li.user_id {
+  padding: 0 0 1.333rem 0;
+}
+.change_pass_box .user_info_box > ul > li {
+  width: 100%;
+  padding: 0 0 0.667rem 0;
+}
+.change_pass_box .user_info_box > ul > li:last-child {
+  padding: 0;
+}
+
+.tel_box > span {
+  width: 100%;
+  display: block;
+}
+.tel_box > p {
+  padding: 0.667rem 0 0 0;
+  width: 100%;
+}
+.tel_box > p > button {
+  padding: 1rem 0;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #444444;
+  border-radius: 0.333rem;
+  border: 0.067rem solid #888888;
+  background-color: #ffffff;
+}
+.tel_input_sns > span {
+  z-index: 1;
+  position: relative;
+  float: left;
+  display: block;
+  width: 70%;
+}
+.tel_input_sns > span.input_wrap > i {
+  /* right:130px; */
+  right: 4.333rem;
+}
+.user_id > span.input_wrap > i {
+  /* right:130px; */
+  right: 1rem;
+}
+.tel_input_sns > span em {
+  z-index: 2;
+  position: absolute;
+  right: 1rem;
+  top: 1.167rem;
+  display: inline-block;
+  font-size: 0.933rem;
+  letter-spacing: -0.028rem;
+  text-align: right;
+  color: #fb5751;
+}
+.tel_input_sns > p {
+  float: right;
+  display: block;
+  width: 26%;
+}
+.user_id > p > button {
+  width: 100%;
+  padding: 0.897rem 0;
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #444;
+  background: #fff;
+  border-radius: 0.333rem;
+  border: 0.067rem solid #888;
+}
+.user_id.on > p > button {
+  background: #fb5751;
+  border: 0.067rem solid #fb5751;
+}
+.tel_input_sns > p > button {
+  width: 100%;
+  padding: 0.897rem 0;
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #fff;
+  background: #aaa;
+  border-radius: 0.333rem;
+  border: 0.067rem solid #aaa;
+}
+
+.tel_input_sns.on > p > button {
+  background: #fb5751;
+  border: 0.067rem solid #fb5751;
+}
+.user_info_box:nth-child(2) .tel_input_sns {
+  padding: 0.667rem 0 0 0;
+}
+.user_info_box > ul > li > p.error_info {
+  display: none;
+  padding: 0.6rem 0 0 0;
+  font-size: 0.867rem;
+  font-weight: 300;
+  letter-spacing: -0.026rem;
+  color: #e74038;
+}
+.user_info_box > ul > li.error > p.error_info {
+  display: block;
+}
+.user_info_box > ul > li.error span.input_wrap.on {
+  border: 0.067rem solid #e74038;
+}
+.input_user_info > p {
+  width: 100%;
+}
+.input_user_info > p > button {
+  width: 100%;
+  padding: 1.333rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #ffffff;
+  background: #aaa;
+}
+.input_user_info > p > button.on {
+  background: #fb5751;
+}
+
+.input_user_info .tel_input_sns.user_id > p > button {
+  width: 100%;
+  padding: 0.89rem 0;
+  font-size: 1rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: #444444;
+  background: #fff;
+  border-radius: 0.333rem;
+  border: 0.067rem solid #888;
+}
+.input_user_info .tel_input_sns.user_id > p.error_info {
+  display: none;
+  width: 100%;
+  padding: 0.6rem 0 0 0;
+  font-size: 0.867rem;
+  font-weight: 300;
+  letter-spacing: -0.026rem;
+  color: #e74038;
+}
