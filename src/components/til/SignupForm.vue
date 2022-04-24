@@ -19,35 +19,46 @@
 
 <script>
 import { registerUser } from '@/api/index';
+import { ref } from '@vue/reactivity';
 
 export default {
-	data() {
-		return {
-			// form values
-			username: '',
-			password: '',
-			nickname: '',
-			// log
-			logMessage: '',
-		};
-	},
-	methods: {
-		async submitForm() {
-			const userData = {
-				username: this.username,
-				password: this.password,
-				nickname: this.nickname,
+	setup() {
+		const username = ref('');
+		const password = ref('');
+		const nickname = ref('');
+		const logMessage = ref('');
+
+		const submitForm = async () => {
+			const objData = {
+				username: username.value,
+				password: password.value,
+				nickname: nickname.value,
 			};
-			const { data } = await registerUser(userData);
-			console.log(data.username);
-			this.logMessage = `${data.username} 님이 가입되었습니다`;
-			this.initForm();
-		},
-		initForm() {
-			this.username = '';
-			this.password = '';
-			this.nickname = '';
-		},
+
+			try {
+				const { data } = await registerUser(objData);
+				console.log(data);
+
+				initForm();
+
+				// const { data } = await registerUser(userData);
+				// console.log(data.username);
+				logMessage.value = `${data.username} 님이 가입되었습니다`;
+
+				// logMessage.value = res.username;
+			} catch (error) {
+				console.log(error.response.data);
+				logMessage.value = error.response.data;
+			}
+		};
+
+		function initForm() {
+			username.value = '';
+			password.value = '';
+			nickname.value = '';
+		}
+
+		return { username, password, nickname, logMessage, submitForm };
 	},
 };
 </script>

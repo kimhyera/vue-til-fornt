@@ -8,57 +8,47 @@
 			<label for="password">pw:</label>
 			<input id="password" type="text" v-model="password" />
 		</div>
-		<button :disabled="!isUsernameValid || !password" type="submit">
-			로그인
-		</button>
+		<!-- :disabled="!isUsernameValid || !password"  -->
+		<button type="submit">로그인</button>
 		<p>{{ logMessage }}</p>
 	</form>
 </template>
 
 <script>
 import { loginUser } from '@/api/index';
-import { validateEmail } from '@/utils/validation';
+import { ref } from '@vue/reactivity';
 
 export default {
-	data() {
-		return {
-			// form values
-			username: '',
-			password: '',
-			// log
-			logMessage: '',
-		};
-	},
-	computed: {
-		isUsernameValid() {
-			return validateEmail(this.username);
-		},
-	},
-	methods: {
-		async submitForm() {
+	setup() {
+		const username = ref('');
+		const password = ref('');
+		const logMessage = ref('');
+
+		const submitForm = async () => {
+			const objData = {
+				username: username.value,
+				password: password.value,
+			};
+
 			try {
-				// 비즈니스 로직
-				const userData = {
-					username: this.username,
-					password: this.password,
-				};
-				const { data } = await loginUser(userData);
-				console.log(data.user.username);
-				this.logMessage = `${data.user.username} 님 환영합니다`;
-				// this.initForm();
+				const res = await loginUser(objData);
+				console.log(res);
+
+				initForm();
+
+				// logMessage.value = res.username;
 			} catch (error) {
-				// 에러 핸들링할 코드
 				console.log(error.response.data);
-				this.logMessage = error.response.data;
-				// this.initForm();
-			} finally {
-				this.initForm();
+				logMessage.value = error.response.data;
 			}
-		},
-		initForm() {
-			this.username = '';
-			this.password = '';
-		},
+		};
+
+		function initForm() {
+			username.value = '';
+			password.value = '';
+		}
+
+		return { username, password, logMessage, submitForm };
 	},
 };
 </script>
