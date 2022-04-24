@@ -19,7 +19,9 @@
 
 <script>
 import { registerUser } from '@/api/index';
-import { ref } from '@vue/reactivity';
+
+import { ref, watchEffect } from 'vue';
+import { validateEmail } from '@/utils/validation';
 
 export default {
 	setup() {
@@ -28,7 +30,31 @@ export default {
 		const nickname = ref('');
 		const logMessage = ref('');
 
+		const isTyping = ref(false);
+
 		const submitForm = async () => {
+			//유효성 검사
+			if (username.value.length === 0) {
+				logMessage.value = `아이디를 입력해주세요`;
+
+				return;
+			}
+			if (password.value.length === 0) {
+				logMessage.value = `패스워드를 입력해주세요`;
+
+				return;
+			}
+			if (nickname.value.length === 0) {
+				logMessage.value = `닉네임을 입력해주세요`;
+				return;
+			}
+
+			if (!validateEmail(username.value)) {
+				logMessage.value = `유효한 아이디를 입력해주세요.`;
+
+				return;
+			}
+
 			const objData = {
 				username: username.value,
 				password: password.value,
@@ -37,18 +63,18 @@ export default {
 
 			try {
 				const { data } = await registerUser(objData);
-				console.log(data);
 
-				initForm();
+				logMessage.value = `asdfasdf`;
 
-				// const { data } = await registerUser(userData);
-				// console.log(data.username);
+				console.log(data, data.username);
+
 				logMessage.value = `${data.username} 님이 가입되었습니다`;
+				initForm();
 
 				// logMessage.value = res.username;
 			} catch (error) {
 				console.log(error.response.data);
-				logMessage.value = error.response.data;
+				logMessage.value = error.response.data.message;
 			}
 		};
 
@@ -58,7 +84,24 @@ export default {
 			nickname.value = '';
 		}
 
-		return { username, password, nickname, logMessage, submitForm };
+		watchEffect(() => {
+			console.log(username.value, validateEmail(username.value));
+
+			if (validateEmail(username.value)) {
+				logMessage.value = `유효한 아이디입니다.`;
+			} else {
+				// logMessage.value = ``;
+			}
+		});
+
+		return {
+			username,
+			password,
+			nickname,
+			logMessage,
+			submitForm,
+			isTyping,
+		};
 	},
 };
 </script>

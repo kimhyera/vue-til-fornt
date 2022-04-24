@@ -31,12 +31,12 @@ export default {
 			};
 
 			try {
-				const res = await loginUser(objData);
-				console.log(res);
+				const { data } = await loginUser(objData);
+				//console.log(res);
 
 				initForm();
 
-				// logMessage.value = res.username;
+				logMessage.value = data.user.username;
 			} catch (error) {
 				console.log(error.response.data);
 				logMessage.value = error.response.data;
