@@ -1,8 +1,7 @@
 <template lang="">
 	<header class="header">
 		<div class="wrapper d-flex">
-			<h1>header</h1>
-
+			<a href="/main">메인</a>
 			<div class="links ml-auto">
 				<!-- 1 -->
 				<template v-if="isUserLogin">
@@ -48,7 +47,8 @@ export default {
 </script>
 <style lang="scss">
 .header {
-	background: yellow;
+	background: #ddd;
+	padding: 10px 0;
 	.links {
 		margin-left: auto;
 	}

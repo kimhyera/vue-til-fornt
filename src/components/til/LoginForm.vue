@@ -2,14 +2,25 @@
 	<form @submit.prevent="submitForm">
 		<div>
 			<label for="username">id:</label>
-			<input id="username" type="text" v-model="username" />
+			<input
+				class="form-input"
+				id="username"
+				type="text"
+				v-model="username"
+			/>
 		</div>
 		<div>
 			<label for="password">pw:</label>
-			<input id="password" type="text" v-model="password" />
+			<input
+				class="form-input"
+				id="password"
+				type="text"
+				v-model="password"
+			/>
 		</div>
 		<!-- :disabled="!isUsernameValid || !password"  -->
-		<button type="submit">로그인</button>
+		<br />
+		<button type="submit" class="form-input">로그인</button>
 		<p>{{ logMessage }}</p>
 	</form>
 </template>

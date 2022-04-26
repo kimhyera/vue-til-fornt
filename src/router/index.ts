@@ -19,8 +19,8 @@ const routes: Array<RouteRecordRaw> = [
 	},
 
 	{
-		path: '/guide',
-		component: () => import('@/components/Guide.vue'),
+		path: '/postWrite',
+		component: () => import('@/views/til/post/PostWrite.vue'),
 	},
 	// {
 	// 	path: '/layout',

@@ -8,9 +8,7 @@
 			<br />
 
 			<div class="text-right">
-				<!-- <a="/postWrite" class="btn btn-primary-2">
-					글쓰기
-				</r> -->
+				<a href="/postWrite" class="btn btn-primary-2"> 글쓰기 </a>
 			</div>
 		</div>
 	</div>
