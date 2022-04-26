@@ -27,14 +27,19 @@
 <script>
 import { computed } from '@vue/reactivity';
 import { useStore } from 'vuex';
+
+import { useRouter } from 'vue-router';
 export default {
 	setup() {
 		const store = useStore();
+
+		const router = useRouter();
 
 		const isUserLogin = computed(() => store.getters.isLogin);
 
 		const logoutUser = () => {
 			store.commit('setLogout');
+			router.push('/login');
 		};
 
 		return { isUserLogin, logoutUser };
