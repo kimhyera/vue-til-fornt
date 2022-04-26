@@ -17,18 +17,23 @@ const routes: Array<RouteRecordRaw> = [
 		path: '/main',
 		component: () => import('@/views/til/MainPage.vue'),
 	},
+
 	{
-		path: '/layout',
-		name: 'layout',
-		component: () => import('../layouts/Layout.vue'),
-		children: [
-			{
-				path: '/gateway',
-				name: 'Gateway',
-				component: () => import('../views/Gateway.vue'),
-			},
-		],
+		path: '/guide',
+		component: () => import('@/components/Guide.vue'),
 	},
+	// {
+	// 	path: '/layout',
+	// 	name: 'layout',
+	// 	component: () => import('../layouts/Layout.vue'),
+	// 	children: [
+	// 		{
+	// 			path: '/gateway',
+	// 			name: 'Gateway',
+	// 			component: () => import('../views/Gateway.vue'),
+	// 		},
+	// 	],
+	// },
 ];
 
 const router = createRouter({

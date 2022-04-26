@@ -2,7 +2,8 @@ import { createStore } from 'vuex';
 
 export default createStore({
 	state: {
-		username: '',
+		username: localStorage.getItem('username') || '',
+		token: localStorage.getItem('token') || '',
 	},
 	getters: {
 		isLogin(state) {
@@ -15,6 +16,16 @@ export default createStore({
 		},
 		clearUsername(state) {
 			state.username = '';
+		},
+		setToken(state, token) {
+			state.token = token;
+		},
+		setLogout(state) {
+			state.username = '';
+			state.token = '';
+			// 데이터 삭제
+			localStorage.removeItem('username');
+			localStorage.removeItem('token');
 		},
 	},
 });

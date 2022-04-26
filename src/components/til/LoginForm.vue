@@ -17,9 +17,13 @@
 <script>
 import { loginUser } from '@/api/index';
 import { ref } from '@vue/reactivity';
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
 
 export default {
 	setup() {
+		const router = useRouter();
+		const store = useStore();
 		const username = ref('');
 		const password = ref('');
 		const logMessage = ref('');
@@ -33,10 +37,20 @@ export default {
 			try {
 				const { data } = await loginUser(objData);
 				//console.log(res);
+				const { user, token } = data;
+
+				//vuex 담기
+				store.commit('setUsername', user.username);
+				store.commit('setToken', token);
+				//local storge 에 담기
+				localStorage.setItem('username', user.username);
+				localStorage.setItem('token', token);
 
 				initForm();
 
 				logMessage.value = data.user.username;
+
+				router.push('/main');
 			} catch (error) {
 				console.log(error.response.data);
 				logMessage.value = error.response.data;
