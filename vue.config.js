@@ -1,5 +1,13 @@
+const path = require('path');
+
 module.exports = {
-	devServer: {
-		host: 'localhost',
+	css: {
+		loaderOptions: {
+			sass: {
+				additionalData: `
+                `,
+			},
+		},
 	},
+	publicPath: '/',
 };

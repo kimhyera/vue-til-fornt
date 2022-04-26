@@ -1,8 +1,15 @@
 import axios from 'axios';
+import { setInterceptors } from '@/api/common/interseptors';
+
 // 액시오스 초기화 함수
-const instance = axios.create({
-	baseURL: process.env.VUE_APP_API_URL,
-});
+function createInstance() {
+	const instance = axios.create({
+		baseURL: process.env.VUE_APP_API_URL,
+	});
+	return setInterceptors(instance);
+}
+const instance = createInstance();
+
 // 회원가입 API
 function registerUser(userData: any) {
 	return instance.post('signup', userData);
@@ -16,4 +23,8 @@ function loginUser(userData: any) {
 function fetchPosts() {
 	return instance.get('posts');
 }
-export { registerUser, loginUser, fetchPosts };
+// 학습 노트 데이터 등록하는 API
+function createPost(post: any) {
+	return instance.post('posts', post);
+}
+export { registerUser, loginUser, fetchPosts, createPost };

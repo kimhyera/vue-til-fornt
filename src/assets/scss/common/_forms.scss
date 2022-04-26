@@ -1,0 +1,160 @@
+/* SUMMARY:
+// checkbox, radio
+// select
+// input
+// warp
+// textarea
+// validation
+*/
+
+
+$input-h:45px;
+$input-border-color:#ddd;
+
+// checkbox, radio
+.form-check,
+.form-radio {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+
+    &+label {
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 30px;
+
+        //배경
+        &:before {
+            content: "";
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            box-sizing: border-box;
+            background-color: #fff;
+
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+
+        }
+
+        //라인 
+        &:after {
+            content: "";
+            top: 0;
+            left: 0;
+            position: absolute;
+            border: 1px solid #ccc;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+
+
+
+    }
+
+    &:disabled {
+        &+label {
+            &:before {
+                background: #f6f6f6;
+            }
+
+        }
+
+    }
+
+
+
+}
+
+.form-check {
+    &:checked+label:before {
+        background-image: url(~@/assets/images/form/icon_check_on.png);
+        background-size: 13.5px auto;
+    }
+
+    &:checked+label:after {
+        border-color: $primary-1
+    }
+}
+
+.form-radio {
+    &:checked+label:before {
+        background-image: url(~@/assets/images/form/icon_radio_on.svg);
+        background-size: 12px auto;
+        border-color: $primary-1;
+    }
+
+    &:checked+label:after {
+        border-color: $primary-1
+    }
+
+}
+
+
+
+// select 
+.form-select {
+    padding: 0 10px;
+    border: 1px solid $input-border-color;
+    height: 32px;
+    line-height: 30px;
+    font-weight: 300;
+    //화살표 이미지 
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 6px) center;
+    background-position: -webkit-calc(100% - 6px) center;
+    background-image: url(~@/assets/images/form/icon_select-down.svg);
+    background-size: 16px 12px;
+    padding-right: 22px !important;
+
+    &:disabled {
+        color: #aaa;
+    }
+
+    &:focus {
+        border-color: $primary-1;
+    }
+
+}
+
+.form-select {
+    &.select-block {
+        width: 100%;
+    }
+}
+
+
+// input
+
+.form-input {
+
+    display: inline-block;
+    width: 100%;
+    border: 1px solid $input-border-color;
+    border-radius: 3px;
+    font-weight: normal;
+    height: $input-h;
+    line-height: $input-h - 2px;
+    padding: 0 15px;
+    color: #888;
+    letter-spacing: -0.84px;
+
+    &::-ms-expand {
+        background-color: transparent;
+        border: 0;
+    }
+
+}
