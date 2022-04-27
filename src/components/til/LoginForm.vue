@@ -47,7 +47,7 @@ export default {
 
 			try {
 				const { data } = await loginUser(objData);
-				//console.log(res);
+
 				const { user, token } = data;
 
 				//vuex 담기

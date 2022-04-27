@@ -22,6 +22,13 @@ const routes: Array<RouteRecordRaw> = [
 		path: '/postWrite',
 		component: () => import('@/views/til/post/PostWrite.vue'),
 	},
+
+	{
+		path: '/post/:id',
+
+		name: 'PostEdit',
+		component: () => import('@/views/til/post/PostEdit.vue'),
+	},
 	// {
 	// 	path: '/layout',
 	// 	name: 'layout',

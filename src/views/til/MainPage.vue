@@ -4,7 +4,11 @@
 			<h1 class="page-header">Today I Learned</h1>
 
 			<loading-spinner v-if="isLoading"></loading-spinner>
-			<post-list v-else :postList="postList"></post-list>
+			<post-list
+				v-else
+				:postList="postList"
+				@loadPostList="loadPostList"
+			></post-list>
 			<br />
 
 			<div class="text-right">
@@ -43,6 +47,7 @@ export default {
 		return {
 			postList,
 			isLoading,
+			loadPostList,
 		};
 	},
 };
